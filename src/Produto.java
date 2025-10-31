@@ -1,8 +1,8 @@
 public class Produto {
     String nome;
-    Double preco;
+    Integer preco;
 
-    public Produto(String nome, Double preco) {
+    public Produto(String nome, Integer preco) {
         this.nome = nome;
         this.preco = preco;
     }
@@ -17,11 +17,11 @@ public class Produto {
         this.nome = nome;
     }
 
-    public Double getPreco() {
+    public Integer getPreco() {
         return preco;
     }
 
-    public void setPreco(Double preco) {
+    public void setPreco(Integer preco) {
         this.preco = preco;
     }
 

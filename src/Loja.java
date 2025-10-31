@@ -1,37 +1,35 @@
 public class Loja {
     String nome;
     Integer quantidadeFuncionarios;
-    Double salarioBaseFuncionario;
+    Integer salarioBaseFuncionario;
 
-    public Loja(Double salarioBaseFuncionario, Integer quantidadeFuncionarios, String nome) {
+    public Loja(String nome, Integer quantidadeFuncionarios, Integer salarioBaseFuncionario) {
         this.salarioBaseFuncionario = salarioBaseFuncionario;
         this.quantidadeFuncionarios = quantidadeFuncionarios;
         this.nome = nome;
     }
 
-    public void LojaComSalarioPadrao(Integer quantidadeFuncionarios, String nome) {
-        this.salarioBaseFuncionario = -1.0;
-        this.quantidadeFuncionarios = quantidadeFuncionarios;
-        this.nome = nome;
+    public Loja(String nome, Integer quantidadeFuncionarios) {
+        this(nome, quantidadeFuncionarios, -1);
     }
 
-    public double gastosComSalario(){
-        if(salarioBaseFuncionario == -1.0){
-            return 1.0;
+    public Integer gastosComSalario(){
+        if(salarioBaseFuncionario == -1){
+            return 1;
         }
         else{
-        Double gastosSalario = quantidadeFuncionarios * salarioBaseFuncionario;
+        Integer gastosSalario = quantidadeFuncionarios * salarioBaseFuncionario;
         return gastosSalario;
     }}
 
 
-    public String tamanhoDaLoja(){
+    public char tamanhoDaLoja(){
         if(quantidadeFuncionarios < 10){
-            return "P";
+            return 'P';
         } else if (quantidadeFuncionarios <= 30) {
-            return "M";
+            return 'M';
         } else{
-            return "G";
+            return 'G';
         }
 
     }
@@ -56,11 +54,11 @@ public class Loja {
         this.quantidadeFuncionarios = quantidadeFuncionarios;
     }
 
-    public Double getSalarioBaseFuncionario() {
+    public Integer getSalarioBaseFuncionario() {
         return salarioBaseFuncionario;
     }
 
-    public void setSalarioBaseFuncionario(Double salarioBaseFuncionario) {
+    public void setSalarioBaseFuncionario(Integer salarioBaseFuncionario) {
         this.salarioBaseFuncionario = salarioBaseFuncionario;
     }
 
