@@ -1,7 +1,6 @@
+package model;
+
 import java.time.LocalDate;
-import java.util.Date;
-import java.util.Dictionary;
-import java.util.Hashtable;
 import java.util.Map;
 
 public class Data {
@@ -17,12 +16,12 @@ public class Data {
         this.mes = mes;
         this.ano = ano;
     }
-    else
+    else{
         this.dia = 1;
         this.mes = 1;
         this.ano = 2000;
-        System.out.println("A data inserida é inválida. Data ficou salva como a data padrão 1/1/2000");
-    }
+        System.out.println("A data inserida é inválida. model.Data ficou salva como a data padrão 1/1/2000");
+    }}
 
     public boolean dataValida(int dia, int mes, int ano){
         boolean validaDia = validacaoDia(dia);
@@ -128,7 +127,7 @@ public class Data {
 
     @Override
     public String toString() {
-        return "Data{" +
+        return "model.Data{" +
                 "dia=" + dia +
                 ", mes=" + mes +
                 ", ano=" + ano +

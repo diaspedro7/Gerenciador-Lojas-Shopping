@@ -1,17 +1,27 @@
+package model;
+
 public class Loja {
     String nome;
     Integer quantidadeFuncionarios;
     Integer salarioBaseFuncionario;
+    Endereco endereco;
+    Data dataFundacao;
 
-    public Loja(String nome, Integer quantidadeFuncionarios, Integer salarioBaseFuncionario) {
+
+
+    public Loja(String nome, Integer quantidadeFuncionarios, Integer salarioBaseFuncionario, Endereco endereco, Data data) {
         this.salarioBaseFuncionario = salarioBaseFuncionario;
         this.quantidadeFuncionarios = quantidadeFuncionarios;
         this.nome = nome;
+        this.endereco = endereco;
+        this.dataFundacao = data;
     }
 
-    public Loja(String nome, Integer quantidadeFuncionarios) {
-        this(nome, quantidadeFuncionarios, -1);
+    public Loja(String nome, Integer quantidadeFuncionarios, Endereco endereco, Data data) {
+        this(nome, quantidadeFuncionarios, -1, endereco, data);
     }
+
+    //### Metodos
 
     public Integer gastosComSalario(){
         if(salarioBaseFuncionario == -1){
@@ -35,7 +45,7 @@ public class Loja {
     }
 
 
-
+    //### Getters e Setters
 
 
     public String getNome() {
@@ -62,12 +72,36 @@ public class Loja {
         this.salarioBaseFuncionario = salarioBaseFuncionario;
     }
 
+    public Endereco getEndereco() {
+        System.out.println(endereco);
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
+    public Data getDataFundacao() {
+        System.out.println(dataFundacao);
+        return dataFundacao;
+    }
+
+    public void setDataFundacao(Data dataFundacao) {
+        this.dataFundacao = dataFundacao;
+    }
+
+
+    //### Metodo ToString
+
+
     @Override
     public String toString() {
         return "Loja{" +
                 "nome='" + nome + '\'' +
                 ", quantidadeFuncionarios=" + quantidadeFuncionarios +
                 ", salarioBaseFuncionario=" + salarioBaseFuncionario +
+                ", endereco=" + endereco +
+                ", dataFundacao=" + dataFundacao +
                 '}';
     }
 }
