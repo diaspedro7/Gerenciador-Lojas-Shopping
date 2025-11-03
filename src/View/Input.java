@@ -36,6 +36,8 @@ public class Input {
                 case 2:
                     Produto produto = criarProduto();
                     System.out.println(produto);
+                    boolean estaVencido = produto.estaVencido(new Data(20, 10, 2023));
+                    System.out.println(estaVencido ? "PRODUTO VENCIDO" : "PRODUTO NAO VENCIDO");
                     break;
                 case 3:
                     System.out.println("Encerrando...");
