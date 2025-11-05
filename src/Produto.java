@@ -1,11 +1,9 @@
-package model;
-
 public class Produto {
     String nome;
-    Integer preco;
+    double preco;
     Data dataValidade;
 
-    public Produto(String nome, Integer preco, Data dataValidade) {
+    public Produto(String nome, double preco, Data dataValidade) {
         this.nome = nome;
         this.preco = preco;
         this.dataValidade = dataValidade;
@@ -33,7 +31,7 @@ public class Produto {
         this.nome = nome;
     }
 
-    public Integer getPreco() {
+    public double getPreco() {
         return preco;
     }
 

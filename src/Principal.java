@@ -1,6 +1,3 @@
-import View.Input;
-
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Principal {

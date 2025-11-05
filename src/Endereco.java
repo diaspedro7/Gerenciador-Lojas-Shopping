@@ -1,5 +1,3 @@
-package model;
-
 public class Endereco {
     String nomeDaRua;
     String cidade;

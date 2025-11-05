@@ -1,10 +1,3 @@
-package View;
-
-import model.Data;
-import model.Endereco;
-import model.Loja;
-import model.Produto;
-
 import java.util.Scanner;
 
 public class Input {
@@ -60,8 +53,12 @@ public class Input {
         String nomeLoja = scanner.nextLine();
         System.out.print("Digite a quantidade de funcionários: ");
         Integer qtdFuncionarios = scanner.nextInt();
-        System.out.print("Digite o salário base dos funcionários (opcional): ");
-        Integer salarioBase = scanner.nextInt();
+        System.out.print("Digite o salário base dos funcionários: ");
+        double salarioBase = scanner.nextDouble();
+        System.out.print("Digite a quantidade máxima de produtos: ");
+        int quantidadeProdutos = scanner.nextInt();
+
+
 
         System.out.println("Digite o endereço da loja.");
                 scanner.nextLine();
@@ -89,7 +86,7 @@ public class Input {
         System.out.print("Ano: ");
         Integer anoData = scanner.nextInt();
 
-        return new Loja(nomeLoja, qtdFuncionarios, salarioBase, new Endereco(ruaEndereco, cidadeEndereco, estadoEndereco, paisEndereco, cepEndereco, numeroEndereco, complementoEndereco), new Data(diaData, mesData, anoData));
+        return new Loja(nomeLoja, qtdFuncionarios, salarioBase, new Endereco(ruaEndereco, cidadeEndereco, estadoEndereco, paisEndereco, cepEndereco, numeroEndereco, complementoEndereco), new Data(diaData, mesData, anoData), quantidadeProdutos);
     }
 catch (Exception e){
     System.out.println("Inserção inválida. Tente novamente");

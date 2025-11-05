@@ -1,5 +1,3 @@
-package model;
-
 import java.time.LocalDate;
 import java.util.Map;
 
@@ -8,7 +6,6 @@ public class Data {
     int mes;
     int ano;
 
-    //TODO: Melhorar isso daqui
     public Data(int dia, int mes, int ano) {
     boolean validacaoData = dataValida(dia, mes, ano);
     if(validacaoData){
@@ -20,7 +17,7 @@ public class Data {
         this.dia = 1;
         this.mes = 1;
         this.ano = 2000;
-        System.out.println("A data inserida é inválida. model.Data ficou salva como a data padrão 1/1/2000");
+        System.out.println("A data inserida é inválida. Data ficou salva como a data padrão 1/1/2000");
     }}
 
     public boolean dataValida(int dia, int mes, int ano){
@@ -127,7 +124,7 @@ public class Data {
 
     @Override
     public String toString() {
-        return "model.Data{" +
+        return "Data{" +
                 "dia=" + dia +
                 ", mes=" + mes +
                 ", ano=" + ano +
